@@ -1,0 +1,34 @@
+{
+  "connections": [
+    {
+      "id": "sensor1_relay1_pin2",
+      "name": "Sensor 1 -> Relay 1 -> Pin 2",
+      "description": "MS ID detection (Material Setter operator QR scanner trigger)",
+      "arduino_pin": 2,
+      "pin_label": "P2",
+      "type": "sensor_relay",
+      "active_state": "LOW",
+      "components": {
+        "sensor": "IR Sensor 1 (5V)",
+        "relay": "Relay 1 (5V, NO contact)",
+        "wiring": "Sensor VCC->VCC, Sensor GND->GND, Sensor OUT->Relay IN, Relay VCC->VCC, Relay GND->GND, Relay NO->Pin 2, Relay COM->GND"
+      }
+    }
+  ],
+  "all_monitored_pins": [
+    {"pin": 2,  "label": "P2",  "name": "MS ID Sensor",           "description": "IR Sensor 1 - Material Setter ID detection"},
+    {"pin": 5,  "label": "P5",  "name": "MS Kitting Sensor",      "description": "IR Sensor 5 - Kitting QR code detection at MS"},
+    {"pin": 7,  "label": "P7",  "name": "Standby Sensor",         "description": "IR Sensor 2 - Dunpla at Standby"},
+    {"pin": 9,  "label": "P9",  "name": "P1 ID Sensor",           "description": "IR Sensor 3 - P1 ID detection"},
+    {"pin": 11, "label": "P11", "name": "P1 Kitting Sensor",      "description": "IR Sensor 5 - P1 kitting detection"},
+    {"pin": 22, "label": "P22", "name": "Process 1 Sensor",       "description": "IR Sensor 6 - Dunpla at Process 1"},
+    {"pin": 23, "label": "P23", "name": "P2 ID Sensor",           "description": "IR Sensor 7 - P2 ID detection"},
+    {"pin": 28, "label": "P28", "name": "Process 2 Sensor",       "description": "IR Sensor 8 - Dunpla at Process 2"}
+  ],
+  "settings": {
+    "check_interval_ms": 500,
+    "intermittent_threshold": 5,
+    "intermittent_window_s": 2.0,
+    "history_max_entries": 200
+  }
+}
